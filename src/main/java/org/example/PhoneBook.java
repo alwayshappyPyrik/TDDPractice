@@ -24,6 +24,9 @@ public class PhoneBook {
     }
 
     public String findByName(String nameContact) {
-        return null;
+        if (phoneBook.containsKey(nameContact)) {
+            return phoneBook.get(nameContact);
+        }
+        return "По такому имени номера нету";
     }
 }
