@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class PhoneBook {
 
-    Map<String, String> phoneBook = new HashMap<>();
+    static Map<String, String> phoneBook = new HashMap<>();
 
     public int add(String name, String numberPhone) {
         phoneBook.put(name, numberPhone);
