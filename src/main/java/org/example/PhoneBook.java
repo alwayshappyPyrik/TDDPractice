@@ -22,4 +22,8 @@ public class PhoneBook {
 
         return keyByValue.orElse("По такому номеру контакта нету");
     }
+
+    public String findByName(String nameContact) {
+        return null;
+    }
 }
