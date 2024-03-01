@@ -13,4 +13,14 @@ class PhoneBookTest {
 
         assertEquals(1, actualSizePhoneBook);
     }
+
+    @Test
+    public void findByNumber() {
+        PhoneBook phoneBook = new PhoneBook();
+        String actualContactName = phoneBook.findByNumber("Yaroslav");
+
+        assertEquals("Yaroslav", actualContactName);
+    }
+
+
 }
