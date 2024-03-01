@@ -6,9 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PhoneBookTest {
 
+    PhoneBook phoneBook = new PhoneBook();
+
     @Test
     public void add() {
-        PhoneBook phoneBook = new PhoneBook();
         int actualSizePhoneBook = phoneBook.add("Yaroslav", "7-999-999-99-99");
 
         assertEquals(1, actualSizePhoneBook);
@@ -16,7 +17,6 @@ class PhoneBookTest {
 
     @Test
     public void findByNumber() {
-        PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Yaroslav", "7-999-999-99-99");
         String actualContactName = phoneBook.findByNumber("7-999-999-99-99");
 
@@ -25,12 +25,9 @@ class PhoneBookTest {
 
     @Test
     public void findByName() {
-        PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Yaroslav", "7-999-999-99-99");
         String actualPhoneNumber = phoneBook.findByName("Yaroslav");
 
         assertEquals("7-999-999-99-99", actualPhoneNumber);
     }
-
-
 }
