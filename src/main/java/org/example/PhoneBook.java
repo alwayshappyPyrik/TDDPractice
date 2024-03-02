@@ -3,6 +3,7 @@ package org.example;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.TreeMap;
 
 public class PhoneBook {
 
@@ -31,5 +32,10 @@ public class PhoneBook {
     }
 
     public void printAllNames(Map<String, String> phoneBook) {
+        phoneBook = new TreeMap<>();
+        phoneBook.put("Yaroslav", "7-999-999-99-99");
+        phoneBook.put("Marina", "7-999-999-99-88");
+        phoneBook.put("Igor", "7-999-999-99-77");
+        System.out.print(phoneBook);
     }
 }
