@@ -47,7 +47,7 @@ class PhoneBookTest {
 
         phoneBook.printAllNames(phoneBookForTest);
 
-        Assertions.assertEquals("{Igor=7-999-999-99-77, Marina=7-999-999-99-88, Yaroslav=7-999-999-99-99}", baos.toString());
+        Assertions.assertEquals("Igor\r\n" +  "Marina\r\n" + "Yaroslav\r\n", baos.toString());
         System.setOut(oldOut);
     }
 }
