@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class PhoneBook {
 
-    static Map<String, String> phoneBook = new HashMap<>();
+    Map<String, String> phoneBook = new HashMap<>();
 
     public int add(String name, String numberPhone) {
         phoneBook.put(name, numberPhone);
@@ -28,5 +28,8 @@ public class PhoneBook {
             return phoneBook.get(nameContact);
         }
         return "По такому имени номера нету";
+    }
+
+    public void printAllNames(Map<String, String> phoneBook) {
     }
 }
