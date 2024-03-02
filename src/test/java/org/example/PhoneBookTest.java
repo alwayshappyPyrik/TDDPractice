@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -39,15 +37,13 @@ class PhoneBookTest {
 
     @Test
     public void printAllNames() {
-        Map<String, String> phoneBookForTest = new HashMap<>();
-
         PrintStream oldOut = System.out;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         System.setOut(new PrintStream(baos));
 
-        phoneBook.printAllNames(phoneBookForTest);
+        phoneBook.printAllNames();
 
-        Assertions.assertEquals("Igor\r\n" +  "Marina\r\n" + "Yaroslav\r\n", baos.toString());
+        Assertions.assertEquals("Igor\r\n" + "Marina\r\n" + "Yaroslav\r\n", baos.toString());
         System.setOut(oldOut);
     }
 }

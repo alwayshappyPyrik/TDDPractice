@@ -31,7 +31,7 @@ public class PhoneBook {
         return "По такому имени номера нету";
     }
 
-    public void printAllNames(Map<String, String> phoneBook) {
+    public void printAllNames() {
         phoneBook = new TreeMap<>();
         phoneBook.put("Yaroslav", "7-999-999-99-99");
         phoneBook.put("Marina", "7-999-999-99-88");
