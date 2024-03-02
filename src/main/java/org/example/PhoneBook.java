@@ -36,6 +36,8 @@ public class PhoneBook {
         phoneBook.put("Yaroslav", "7-999-999-99-99");
         phoneBook.put("Marina", "7-999-999-99-88");
         phoneBook.put("Igor", "7-999-999-99-77");
-        System.out.print(phoneBook);
+        for (Map.Entry<String, String> map : phoneBook.entrySet()) {
+            System.out.println(map.getKey());
+        }
     }
 }
